@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* 
+-css의 가장 처음 부분에 넣을 것
+-세미콜론(;) 자동완성 되지 않으니, 꼭! 넣어주기! 
+-가상요소 선택자(before, after)로 한글을 집어넣을 때 정상표시될 수 있도록 넣어주는 코드
+*/
+
+
+/*
+----웹폰트---
+Noto Sans : font-family: "Noto Sans KR", sans-serif;
+
+EB Garamond : font-family: "EB Garamond", serif;
+
+나눔명조 : font-family: "Nanum Myeongjo", serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+
+/* header */
+#header {}
+
+.header_inner {
+    width: 1320px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {}
+
+.gnb {
+    display: flex;
+    align-items: center;
+}
+
+.gnb li {
+    margin: 0 30px;
+}
+
+.gnb li a {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* banner */
+#banner {}
+
+/* menu */
+#menu {
+    width: 1320px;
+    margin: auto;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 100px;
+    color: goldenrod;
+}
+
+.title {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 30px 0;
+    color: #111;
+    line-height: 100%;
+    /* !! */
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery h2 {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #111;
+    font-weight: 500;
+}
+
+#menu .gallery .name {
+    font-size: 14px;
+    color: burlywood;
+}
+
+#menu .gallery p {
+    font-size: 14px;
+}
+
+.gallery h3 {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 30px;
+    margin: 20px 0;
+    color: #111;
+}
+
+.gallery span {
+    font-size: 12px;
+}
+
+/* #menu p, #menu .gallery p 충돌
+위에 있던 #menu p 설정대로 반영됨(상위클래스) */
+
+.gallery .swiper-slide:hover .img_box img {
+    transform: scale(1.1, 1.1);
+}
+
+.img_box {
+    overflow: hidden;
+}
+
+.gallery .swiper-slide .img_box img {
+    transition: all 0.3s;
+}
+
+
+/* mdpick */
+#mdpick {
+    margin-top: 100px;
+    background: url(../images/md_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.mdpick_inner {
+    width: 1320px;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+#mdpick .subtitle {
+    text-align: center;
+    margin: 30px;
+    padding-top: 50px;
+}
+
+#mdpick .title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.flex_box {
+    width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* 움직이는 대상에게 직접 주기 쉬운데, 
+    그 대상의 부모 요소한테 줘야 함 */
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+#mdpick .img_box {
+    width: 540px;
+}
+
+/* 수업시간 필터 효과 추가 */
+#mdpick .img_box:hover img {
+    transition: all 0.5s;
+    filter: blur(5px) grayscale(100%);
+    -webkit-filter: blur(5px) grayscale(100%);
+    /* -webkit- =접두사
+    신기능 사용 시 옛날 브라우저에서 부분적으로 지원 */
+}
+
+
+.text_box {
+    width: 650px;
+    padding: 30px 0;
+}
+
+.artist {
+    color: burlywood;
+}
+
+h3 {
+    padding: 30px 0;
+}
+
+p {}
+
+.read_more {
+    width: 100px;
+    height: 30px;
+    border: 1px solid burlywood;
+    margin: 50px 30px 0 0;
+    /* display: block; */
+}
+
+.read_more:hover {
+    background-color: burlywood;
+}
+
+/* btn2 (수업시간) */
+.btn2 {
+    padding-top: 30px;
+}
+
+.btn2 a {
+    border: 1px solid burlywood;
+    padding: 15px 30px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* btn2 a의 hover효과는 a에 hover했을 때, 
+burlywood 색상의 박스가 왼쪽부터 오른쪽으로
+글씨 뒤에 나타나는 효과로 줄 것임. */
+
+/* hover효과는 기본적으로, 마우스를 
+올렸을 때의 모양을 만들고 hover전에는 
+다른 모양이다가 hover하면 그 모양이 
+나타나게 설정한다. */
+
+.btn2 a::before {
+    transition: all 0.5s;
+    /* 길이가 조정될 네모박스 */
+    content: "";
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    /* 부모의 크기와 똑같이 만듦 */
+    display: block;
+    /* before나 after로 추가하는 요소는 
+기본적으로 inline요소이므로, 
+길이 등을 줄 때는 속성을 바꿔준다. */
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+
+.btn2 a:hover::before {
+    left: 0;
+}
+
+.btn2 a:hover span {
+    color: #fff;
+}
+
+.btn2 a span {
+    position: relative;
+}
+
+/* span태그 안 글씨에게 position 속성을
+ 부여해서, 색상있는 네모보다 위에 올라오게 함 */
+
+
+/* sub_banner */
+#sub_banner {
+    background: url(../images/gallery-bg.jpg) no-repeat center center fixed;
+    height: 400px;
+}
+
+.sub_banner_inner {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* h1 당사자말고 부모요소에게 주기 sub banner inner와 높이가 같아야 함
+     align items등 교차축을 관련 속성들은 플렉스 컨테이너의 높이를 기준으로 정렬되므로, 
+    inner의 높이를 sub_banner의 높이와 같아지게 설정해줘야 제대로 동작한다.*/
+}
+
+
+.sub_banner_inner h1 {
+    font-family: "EB Garamond", serif;
+    color: #111;
+    font-size: 60px;
+    letter-spacing: 10px;
+    font-weight: 400;
+}
+
+/*본래 h1의 글자 크기는 2em으로 설정되어 있다. em이라는 단위는 부모의 font-size를 가리키는 것으로, 2em은 부모 폰트사이즈의 2배에 해당하는 글씨크기를 갖게 된다.*/
+
+/*** 가로로 가운데
+마진오토, text-align, position, flex 
+
+세로로 가운데
+flex, position 
+***/
+
+
+
+/* new_art */
+#new_art {
+    width: 1320px;
+    margin: auto;
+}
+
+
+.subtitle {}
+
+.title {}
+
+.flex_box {
+    width: 1320px;
+    display: flex;
+    /* margin: auto; */
+    justify-content: space-between;
+    /* justify-content 먹여도 여백이 뒤죽박죽하게 나오면 보통은 
+    flex-item에게 width값이 없어서 그럼... */
+}
+
+.new_item {
+    width: 420px;
+    /* ...width는 실제 이미지값 그대로*/
+    /* height를 넉넉하게 주면 텍스트박스 position줄때 bottom:0 left:0 주면됨 */
+    position: relative;
+}
+
+.img:hover img {
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
+}
+
+.img {
+    overflow: hidden;
+}
+
+
+/* .img_box:hover img {
+    transform: scale(1.1, 1.1);
+}
+-작동안하는 이유는 클래스명을 헷갈려서 잘못 써서....
+*/
+
+.text {
+    width: 320px;
+    padding: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 500px;
+    /* 
+    top을 아예 많이 주거나
+    또는 바닥 기준으로 할 거면
+    bottom: -100 (마이너스값) */
+    left: 0;
+}
+
+.name {
+    color: burlywood;
+}
+
+#new_art h2 {
+    padding: 10px 0;
+}
+
+#new_art p {}
+
+.more {
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+/* footer */
+#footer {
+    margin-top: 300px;
+    /* new_art에서 position된건 없는 자식 셈 치기 때문에 여백 많이 안 주면 footer랑 겹치게 나옴 */
+    background-color: #333;
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+#footer ul {
+    display: flex;
+    padding: 20px 0;
+}
+
+#footer ul li {
+    margin-right: 30px;
+}
+
+#footer ul li a {
+    color: #666;
+    font-size: 14px;
+}
+
+
+p {}

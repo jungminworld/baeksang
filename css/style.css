@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* 가상요소에서 한글을 집어넣을때 정상적으로 넣게끔 하는 코드 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+video,
+iframe {
+  vertical-align: middle;
+}
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*
+가라몬드 - font-family: 'EB Garamond', serif;
+나눔명조 - font-family: 'Nanum Myeongjo', serif;
+노토산스 - font-family: 'Noto Sans KR', sans-serif;
+*/
+
+/* header */
+#header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 80;
+}
+
+.header_inner {
+  width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb {
+  display: flex;
+}
+
+.gnb li {
+  padding: 35px 30px;
+  font-size: 18px;
+}
+
+/* main_banner */
+#main_banner {
+  margin-top: 94px;
+}
+
+#main_banner img {
+  width: 100%;
+}
+
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+  color: #fff;
+}
+
+.banner .swiper-pagination span {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* best */
+#best {
+  width: 1320px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.best_art img {
+  width: 100%;
+}
+
+.sub_title {
+  padding-top: 100px;
+  text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
+  color: burlywood;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.title {
+  color: #111;
+  font-family: 'EB Garamond', serif;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 50px;
+}
+
+.best_art .swiper-slide h3 {
+  color: #111;
+  padding: 30px 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.name {
+  color: burlywood;
+}
+
+.price {
+  padding-top: 30px;
+  font-family: 'Nanum Myeongjo', serif;
+  color: #111;
+}
+
+.price span {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.best_art {
+  padding-bottom: 80px;
+}
+
+.best_art .swiper-pagination span {
+  background-color: #111;
+}
+
+/* md_pick */
+#md_pick {
+  background: url(../images/md_bg.jpg) no-repeat center top;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.md_pick_inner {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.flex_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  width: 540px;
+}
+
+.text {
+  width: 620px;
+}
+
+.sub {
+  color: burlywood;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.text h1 {
+  color: #111;
+  font-size: 40px;
+  line-height: 100%;
+  padding-bottom: 30px;
+}
+
+.btn1 a {
+  border: 1px solid burlywood;
+  padding: 20px 50px;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+/* sub_banner */
+#sub_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/gallery-bg.jpg) no-repeat center top fixed;
+  height: 400px;
+  /*배경이미지에서 일부분만 보여주는 것이므로, 보여줄 높이를 생각해서 height를 지정한다.*/
+}
+
+#sub_banner h1 {
+  font-family: 'EB Garamond', serif;
+  color: #111;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 8px;
+}
+
+/* new_art */
+#new_art {
+  width: 1320px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+}
+
+#new_art ol {
+  display: flex;
+  justify-content: space-between;
+}
+
+#new_art ol li {
+  width: 420px;
+  position: relative;
+}
+
+.white_box {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  background-color: #fff;
+  width: 390px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#new_art ol li:hover .white_box {
+  left: 0;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+/* hover시에 마우스가 내려왔을때도 transition효과가 들어갔으면 좋겠다면, hover가있는 선택자가 아니라 hover가 없는 선택자에 transition만 따로 준다. */
+#new_art ol li .white_box {
+  transition: all 0.5s;
+}
+
+.white_box h2 {
+  padding: 20px 0;
+}
+
+.btn2 {
+  padding-top: 20px;
+}
+
+/* footer */
+#footer {
+  background: #333;
+}
+
+.footer_inner {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.footer_inner ul {
+  display: flex;
+  padding: 30px 0;
+}
+
+.footer_inner ul li {
+  padding-right: 30px;
+}
+
+.footer_inner p {
+  padding-bottom: 30px;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백상갤러리</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- 웹폰트 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/0308_style.css">
+    <!-- 최종 수정하는 스타일을 넣을 수 있는 css 파일을 상대적으로 가장 밑에 넣어야 수정이 잘 됩니다. -->
+</head>
+
+<body>
+    <div id="header">
+        <div class="header_inner">
+            <h1><a href="#"><img src="./images/logo.png" alt="로고이미지"></a></h1>
+            <ul class="gnb">
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">사진작품</a></li>
+                <li><a href="#">그림작품</a></li>
+                <li><a href="#">작가별</a></li>
+                <li><a href="#">장르별</a></li>
+                <li><a href="#">주제별</a></li>
+            </ul><!--gnb-->
+        </div><!--header_inner-->
+    </div><!--header-->
+
+    <div id="banner">
+        <!-- Swiper -->
+        <div class="swiper main_banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/main1.jpg" alt="메인배너이미지1" width="100%"></div>
+                <!--swiper-slide-->
+                <div class="swiper-slide"><img src="./images/main2.jpg" alt="메인배너이미지2" width="100%"></div>
+                <!--swiper-slide-->
+                <div class="swiper-slide"><img src="./images/main3.jpg" alt="메인배너이미지3" width="100%"></div>
+                <!--swiper-slide-->
+
+            </div><!--swiper-wrapper-->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div><!--swiper main_banner-->
+
+    </div><!-- banner -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".main_banner", {
+            spaceBetween: 0,
+            /* 배너 넘어갈 때 여백없도록 설정 */
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            /* ,가 하나의 옵션이 끝났다는 이야기임. */
+        }); /* 모든 옵션은 요 부분 안에 들어가야 한다. */
+    </script>
+
+    <div id="menu">
+        <p class="subtitle">백상에서 가장 인기있는 작품을 소개합니다.</p>
+        <h1 class="title">BEST ART</h1>
+        <div class="gallery">
+            <!-- Swiper -->
+            <div class="swiper menu_box">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="./images/best1.jpg" alt="best1">
+                        </div><!--img box-->
+                        <h2>아를의 랑그루아 다리</h2>
+                        <p class="name">빈센트 반 고흐</p>
+                        <p>20.0cm x 35.7cm</p>
+                        <h3>38,200<span>원</span></h3>
+                    </div><!--swiper slide-->
+                    <div class="swiper-slide">
+                        <div class="img_box"><img src="./images/best2.jpg" alt="best2"></div>
+                        <!--img_box-->
+
+                        <h2>키스</h2>
+                        <p class="name">구스타프 클림트</p>
+                        <p>20.0cm x 35.7cm</p>
+                        <h3>36,500<span>원</span></h3>
+
+                    </div><!--swiper slide-->
+                    <div class="swiper-slide">
+                        <div class="img_box"><img src="./images/best3.jpg" alt="best2"></div><!--img_box-->
+
+                        <h2>앙티브의 아침</h2>
+                        <p class="name">클로드 모네</p>
+                        <p>20.0cm x 35.7cm</p>
+                        <h3>35,700<span>원</span></h3>
+
+                    </div><!--swiper slide-->
+                    <div class="swiper-slide">
+                        <div class="img_box"><img src="./images/best4.jpg" alt="best2"></div>
+
+                        <h2>아테제 호수</h2>
+                        <p class="name">구스타프 클림트</p>
+                        <p>20.0cm x 35.7cm</p>
+                        <h3>42,400<span>원</span></h3>
+
+                    </div><!--swiper slide-->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="./images/best5.jpg" alt="best2">
+                        </div><!--img_box-->
+
+                        <h2>지베르니 봄의 효과</h2>
+                        <p class="name">클로드 모네</p>
+                        <p>20.0cm x 35.7cm</p>
+                        <h3>36,500<span>원</span></h3>
+
+                    </div><!--swiper slide-->
+                </div><!--swiper-wrapper-->
+                <div class="swiper-pagination_gallery"></div>
+            </div><!--swiper menu box-->
+        </div><!--title-->
+    </div><!-- menu -->
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".menu_box", {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <div id="mdpick">
+        <!-- 배경 이미지 -->
+        <div class="mdpick_inner">
+            <!-- 가운데 정렬 -->
+            <p class="subtitle">백상 큐레이터가 선정한 추천 작품을 만나보세요.</p>
+            <h1 class="title">MD PICK</h1>
+            <div class="flex_box">
+                <div class="img_box"><img src="./images/md_pick.jpg" alt="md pick 그림">
+                </div><!--img_box-->
+                <div class="text_box">
+                    <p class="artist">구스타프 클림트</p>
+                    <h3>산지기의 집</h3>
+                    <p>구스타프 클림트의 산지기의 집(House in the garden)입니다. 구스타프 클림트는 오스트리아의 화가. 아르누보 계열의 장식적인 양식을 선호하며 전통적인 미술에
+                        대항해 ‘빈
+                        분리파’를 결성했다. 관능적인 여성 이미지와 찬란한 황금빛, 화려한 색채를 특징으로 하고 성(性)과 사랑, 죽음에 대한 알레고리로 많은 사람들을 매혹시켰다.</p>
+
+                    <button class="read_more"><a href="#">Read More</a></button>
+
+                    <p class="btn2">
+                        <a href="#"><span>Read More</span>
+                            <!-- 나중에 네모박스 위에 글자가 올라오게 하려고 span태그 만듦 -->
+                        </a>
+                    </p>
+                </div><!--flex_box-->
+            </div><!--textbox-->
+        </div><!--mdpick_inner-->
+    </div><!--mdpick-->
+
+    <div id="sub_banner">
+        <!--배경이미지-->
+        <div class="sub_banner_inner">
+            <h1>BAEXANG GALLERY</h1>
+        </div><!--sub_banner_inner-->
+    </div><!--sub_banner-->
+
+
+    <div id="new_art">
+        <!-- 가운데 정렬 -->
+        <p class="subtitle">백상과 함께하는 새로운 작품을 소개합니다.</p>
+        <h1 class="title">NEW ART</h1>
+
+        <div class="flex_box">
+            <div class="new_item">
+                <div class="img">
+                    <img src="./images/new1.jpg" alt="new 이미지1">
+                </div><!--img-->
+                <div class="text">
+                    <p class="name">클로드 모네</p>
+                    <h2>베르농의 테라스</h2>
+                    <p>
+                        강렬한 색채와 평면성이 강조된 뚜렷한 윤곽선, 평평한 색면 추구에 열정을 쏟았던 '나비파'의 유산을 느낄 수 있다. 1912년 센 강변의 시골마을 베르농의 근요에서...
+                    </p>
+                    <p class="more"><a href="#">Read More</a></p>
+                </div><!--text-->
+            </div><!--new_img-->
+
+            <div class="new_item">
+                <div class="img">
+                    <img src="./images/new2.jpg" alt="new 이미지2">
+                </div><!--img-->
+                <div class="text">
+                    <p class="name">빈센트 반 고흐</p>
+                    <h2>밤의 프로방스 시골길</h2>
+                    <p>
+                        1889년 5월부터 1890년 5월 생레미에서 머문 기간 동안의 작품들은 반 고흐 특유의 소용돌이치며 꿈틀대는 선들로 가득했다. 이 시기 반 고흐의 마음을 사로잡은 소재는
+                        ...
+                    </p>
+                    <p class="more"><a href="#">Read More</a></p>
+                </div><!--text-->
+            </div><!--new_img-->
+
+            <div class="new_item">
+                <div class="img">
+                    <img src="./images/new3.jpg" alt="new 이미지3">
+                </div><!--img-->
+                <div class="text">
+                    <p class="name">카미유와 장</p>
+                    <h2>양산을 든 여인</h2>
+                    <p>
+                        마네의 도움으로 1871년 모네는 아르장퇴유에 거처를 마련하였다. 양산을 든 여인(1875)는 1875년 여름에서 1876년 사이에 그린 일련의 작품 시리즈 가운데
+                        하나이다...
+                    </p>
+                    <p class="more"><a href="#">Read More</a></p>
+                </div><!--text-->
+            </div><!--new_img-->
+        </div><!--flex_box-->
+
+    </div><!--new_art-->
+
+    <div id="footer">
+        <div class="footer_inner">
+            <ul>
+                <li><a href="#">개인정보처리방침 </a></li>
+                <li><a href="#">이용약관 </a></li>
+                <li><a href="#">회사소개</a></li>
+            </ul>
+
+            <p>대표자 : 권순상 ㅣ 사업자 등록번호 : 137-81-30071<br>
+                주소 : 경기도 고양시 일산동구 산황로 178-15 ㅣ EMAIL : gbaexang@gmail.com ㅣ TEL : 031-954-9541 ㅣ FAX : 031-977-9540<br>
+                Copyright © 2022 Baexang Gallery. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- slides per view 등 한번에 보이는 swiper-slide가 여러개인 경우에는 보이는 갯수보다 많은 갯수의 swiper-slide를 만들어야 정상 동작한다.
+예) 처음 보이는 슬라이드가 3개인 경우, 최소 swiper-slide가 4개는 되어야 슬라이드가 동작한다. -->
